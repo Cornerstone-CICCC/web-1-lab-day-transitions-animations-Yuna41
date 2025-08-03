@@ -1,3 +1,7 @@
+button{
+  cursor: pointer;
+}
+
 #btn1{
   background: #000;
   color: #fff;
@@ -47,6 +51,55 @@
     }
     &:after{
       background: #fff;
+    }
+  }
+}
+
+#btn3{
+  border: 1px solid #000;
+  background: green;
+  color: #fff;
+  position: relative;
+  &:before{
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 66px;
+    background: #fff;
+    opacity: .3;
+    position: absolute;
+    top: -10px;
+    left: -36px;
+    transform: rotate(20deg);
+    transition: .4s linear;
+  }
+  &:hover{
+    background: #34b334;
+    &:before{
+      left: 200px;
+    }
+  }
+}
+
+#shape1{
+  width: 200px;
+  height: 200px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s ease;
+  &:before{
+    content: "Hello!";
+    font-size: 1.4rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: .4s ease;
+  }
+  &:hover{
+    background: yellow;
+    &:before{
+      opacity: 1;
     }
   }
 }
