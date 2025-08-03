@@ -113,27 +113,6 @@ button {
   animation: circleChange 8s linear infinite;
 }
 
-#figure1 {
-  position: relative;
-}
-#figure1 img:hover {
-  filter: grayscale(1);
-}
-#figure1 img:hover + figcaption {
-  bottom: -28px;
-}
-#figure1 figcaption {
-  background: pink;
-  font-family: serif;
-  padding: 5px;
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  transition: 0.4s ease;
-}
-
 @keyframes circleChange {
   0%, 100% {
     top: 0;
@@ -158,6 +137,69 @@ button {
     left: 0;
     background: #FEBE10;
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+}
+#figure1 {
+  position: relative;
+}
+#figure1 img:hover {
+  filter: grayscale(1);
+}
+#figure1 img:hover + figcaption {
+  bottom: -28px;
+}
+#figure1 figcaption {
+  background: pink;
+  font-family: serif;
+  padding: 5px;
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  transition: 0.4s ease;
+}
+
+.green-box {
+  width: 0;
+  height: 0;
+  border-top: 20vw solid #B3CD48;
+  border-right: 20vw solid #A3BC44;
+  border-bottom: 20vw solid #84A242;
+  border-left: 20vw solid #D3E08D;
+  box-shadow: -7px 0px 20px #fff;
+  margin: calc((100vh - 40vw) / 2) auto;
+  animation: triangleEffect 1s linear infinite;
+}
+
+@keyframes triangleEffect {
+  0%, 100% {
+    border-top: 20vw solid #B3CD48;
+    border-right: 20vw solid #A3BC44;
+    border-bottom: 20vw solid #84A242;
+    border-left: 20vw solid #D3E08D;
+    box-shadow: -7px 0px 20px #fff;
+  }
+  25% {
+    border-top: 20vw solid #A3BC44;
+    border-right: 20vw solid #84A242;
+    border-bottom: 20vw solid #D3E08D;
+    border-left: 20vw solid #B3CD48;
+    box-shadow: 0 7px 20px #fff;
+  }
+  50% {
+    border-top: 20vw solid #84A242;
+    border-right: 20vw solid #D3E08D;
+    border-bottom: 20vw solid #B3CD48;
+    border-left: 20vw solid #A3BC44;
+    box-shadow: 7px 0 20px #fff;
+  }
+  75% {
+    border-top: 20vw solid #D3E08D;
+    border-right: 20vw solid #B3CD48;
+    border-bottom: 20vw solid #A3BC44;
+    border-left: 20vw solid #84A242;
+    box-shadow: 0 -7px 20px #fff;
   }
 }
 * {
