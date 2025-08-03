@@ -103,6 +103,16 @@ button {
   opacity: 1;
 }
 
+#shape2 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: circleChange 8s linear infinite;
+}
+
 #figure1 {
   position: relative;
 }
@@ -124,6 +134,32 @@ button {
   transition: 0.4s ease;
 }
 
+@keyframes circleChange {
+  0%, 100% {
+    top: 0;
+    left: 0;
+    background: red;
+    clip-path: none;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 100px);
+    background: green;
+    clip-path: circle(50% at 50% 50%);
+  }
+  50% {
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+    background: olive;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+  75% {
+    top: calc(100% - 100px);
+    left: 0;
+    background: #FEBE10;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+}
 * {
   box-sizing: border-box;
 }
