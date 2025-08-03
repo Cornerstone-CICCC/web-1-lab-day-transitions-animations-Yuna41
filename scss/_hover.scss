@@ -103,3 +103,26 @@ button{
     }
   }
 }
+
+#figure1{
+  position: relative;
+  img{
+    &:hover{
+      filter: grayscale(1);
+      +figcaption{
+        bottom: -28px;
+      }
+    }
+  }
+  figcaption{
+    background: pink;
+    font-family: serif;
+    padding: 5px;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    transition: .4s ease;
+  }
+}
